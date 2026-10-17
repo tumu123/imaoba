@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>页面不存在 · 缠论百科</title>
+<meta name="robots" content="noindex,follow">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body><header class="site-head"><div class="wrap">
+<a class="logo" href="/"><span class="mark">缠</span>缠论百科</a>
+<nav class="nav">
+<a href="/">首页</a>
+<a href="/terms/">核心词条</a>
+<a href="/lessons/">108课索引</a>
+<a href="/docs/">原版资料</a>
+<a href="/tool/">画线工具</a>
+</nav>
+<form class="head-search" action="/search/" method="get" onsubmit="return doSearch(event)">
+<input type="search" name="q" placeholder="搜索词条…" aria-label="搜索">
+<button type="submit">搜索</button>
+</form>
+</div></header>
+<main class="wrap" style="padding:64px 0 80px;text-align:center">
+<div style="font-size:64px;font-weight:900;color:var(--brand);line-height:1">404</div>
+<h1 style="margin:14px 0 8px;font-size:24px">这个页面不存在</h1>
+<p style="color:var(--fg-soft);margin:0 0 26px">可能是链接输错了，或者这个页面已经被移动。试试下面的入口：</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><a href="/">首页</a><a href="/terms/">词条库</a><a href="/lessons/">108课索引</a><a href="/docs/">原版资料</a><a href="/tool/">画线工具</a></div>
+<form style="margin:30px auto 0;max-width:420px;display:flex;gap:8px" onsubmit="var q=this.q.value.trim();if(q)location.href='/search/?q='+encodeURIComponent(q);return false">
+<input name="q" type="search" placeholder="搜索词条或课程…" style="flex:1;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);font-family:inherit;font-size:14px">
+<button type="submit" style="background:var(--brand);color:#fff;border:0;border-radius:8px;padding:10px 18px;font-weight:700;font-size:14px;cursor:pointer">搜索</button>
+</form>
+</main>
+<footer class="site-foot"><div class="wrap">
+<div class="cols">
+<div class="col"><h4>核心词条</h4><a href="/terms/fenxing/">分型</a><a href="/terms/baohan/">K线包含关系</a><a href="/terms/bi/">笔</a><a href="/terms/xianduan/">线段</a><a href="/terms/zhongshu/">中枢</a><a href="/terms/zoushi/">走势类型</a><a href="/terms/beichi/">背驰</a><a href="/terms/maimaidian/">三类买卖点</a><a href="/terms/mai1/">第一类买卖点</a><a href="/terms/mai2/">第二类买卖点</a><a href="/terms/mai3/">第三类买卖点</a><a href="/terms/zoushibiwanmei/">走势必完美</a><a href="/terms/jiangefenjie/">同级别分解</a><a href="/terms/tezhengxulie/">特征序列</a><a href="/terms/panzhengbeichi/">盘整背驰</a><a href="/terms/jiange/">区间套与级别</a></div>
+<div class="col"><h4>课程索引</h4>
+<a href="/lessons/">108课全目录</a><a href="/lessons/#g1">第一组 · 基础概念</a>
+<a href="/lessons/#g2">第二组 · 笔与中枢</a><a href="/lessons/#g3">第三组 · 买卖点</a>
+<a href="/lessons/#g4">第四组 · 实战哲学</a></div>
+<div class="col"><h4>资料与工具</h4>
+<a href="/docs/">原版 PDF 下载</a><a href="/tool/">缠论画线工具</a><a href="/about/">关于本站</a></div>
+</div>
+<p class="disclaim"><strong>免责声明：</strong>本站为缠中说禅《教你炒股票》108 课的公开学习资料整理与概念索引，仅供个人学习研究使用。本站内容不构成任何投资建议，据此操作风险自负。所列资料版权归原作者及相关权利人所有，如涉侵权请联系删除。</p>
+<p>© imaoba.com · 缠论百科</p>
+</div></footer>
+<script>
+function doSearch(e){
+  e.preventDefault();
+  var q=(e.target.q.value||"").trim();
+  if(q) location.href="/search/?q="+encodeURIComponent(q);
+  return false;
+}
+</script>
+</body></html>

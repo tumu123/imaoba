@@ -1,0 +1,19 @@
+# 旧版资料页地址 301 到新地址（避免老外链落在首页）
+/doc/czsc-108ke-ajiao.html  /docs/czsc-108ke-ajiao/  301
+/doc/czsc-108ke-tufei.html  /docs/czsc-108ke-tufei/  301
+/doc/czsc-108ke-wenzi-chatu.html  /docs/czsc-108ke-wenzi-chatu/  301
+/doc/czsc-jiaoni-chaogupiao-hongluhuo.html  /docs/czsc-jiaoni-chaogupiao-hongluhuo/  301
+/doc/czsc-jiaoni-chaogupiao-peitu-jiaozhu.html  /docs/czsc-jiaoni-chaogupiao-peitu-jiaozhu/  301
+/doc/czsc-shichang-zhexue-peitu-2017.html  /docs/czsc-shichang-zhexue-peitu-2017/  301
+/doc/czsc-xuexi-tupianji-caitu.html  /docs/czsc-xuexi-tupianji-caitu/  301
+/doc/czsc-yuanji-quanji.html  /docs/czsc-yuanji-quanji/  301
+/doc/chanlun-caopanshu-shizhan-jingyao.html  /docs/chanlun-caopanshu-shizhan-jingyao/  301
+/doc/chanlun-hexin-jishu-jingjie.html  /docs/chanlun-hexin-jishu-jingjie/  301
+/doc/chanlun-jichu-gainian-tujie.html  /docs/chanlun-jichu-gainian-tujie/  301
+/doc/chanlun-jiexi-jishu-tujie.html  /docs/chanlun-jiexi-jishu-tujie/  301
+/doc/chanlun-qushi-dingwei-jingjie.html  /docs/chanlun-qushi-dingwei-jingjie/  301
+/doc/chanlun-tujie-baijinban.html  /docs/chanlun-tujie-baijinban/  301
+/doc/qihuo-rinei-jiaoyi-shizhan.html  /docs/qihuo-rinei-jiaoyi-shizhan/  301
+
+# 首页显式文件名归一
+/index.html  /  301
