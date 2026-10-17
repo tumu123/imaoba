@@ -16,7 +16,8 @@
 <body>
 <header class="site-head"><div class="wrap">
 <a class="logo" href="/"><span class="mark">缠</span>缠论百科</a>
-<nav class="nav">
+<button class="nav-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="site-nav"><i></i></button>
+<nav class="nav" id="site-nav">
 <a href="/">首页</a>
 <a href="/terms/">核心词条</a>
 <a href="/lessons/" class="on">108课索引</a>
@@ -70,5 +71,14 @@ function doSearch(e){
   if(q) location.href="/search/?q="+encodeURIComponent(q);
   return false;
 }
+(function(){
+  var head=document.querySelector('.site-head'), btn=head&&head.querySelector('.nav-toggle');
+  if(!btn) return;
+  function set(open){ head.classList.toggle('open',open); btn.setAttribute('aria-expanded',open?'true':'false'); }
+  btn.addEventListener('click',function(e){ e.stopPropagation(); set(!head.classList.contains('open')); });
+  head.querySelectorAll('.nav a').forEach(function(a){ a.addEventListener('click',function(){ set(false); }); });
+  document.addEventListener('click',function(e){ if(head.classList.contains('open')&&!head.contains(e.target)) set(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
 </script>
 </body></html>
