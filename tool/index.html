@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>缠论画线工具 · 在线自动标注分型 / 笔 / 线段 / 中枢 · 缠论百科</title>
+<meta name="description" content="免费的在线缠论画线工具。粘贴K线数据即可自动完成包含关系处理、分型识别、画笔、画线段、画中枢，支持新笔/老笔切换，可导出PNG与JSON。全部计算在浏览器本地完成，数据不上传。">
+<meta name="keywords" content="缠论画线工具,缠论自动画笔,缠论中枢标注,分型识别,线段划分,在线画线,缠论工具">
+<link rel="canonical" href="https://imaoba.com/tool/">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+/* ---- 工具页专属样式 ---- */
+.tool-grid{display:grid;grid-template-columns:380px 1fr;gap:18px;align-items:start;margin-top:24px}
+@media(max-width:980px){.tool-grid{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.panel h3{margin:0 0 12px;font-size:14.5px;color:var(--fg)}
+#input{width:100%;height:230px;background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;
+  color:var(--fg);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;
+  line-height:1.65;padding:11px 12px;resize:vertical;outline:none;box-sizing:border-box}
+#input:focus{border-color:var(--brand)}
+.hint{font-size:12px;color:var(--fg-dim);line-height:1.7;margin:9px 0 0}
+.hint code{background:var(--card-2);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:11.5px}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btn{background:var(--brand);border:0;color:var(--on-brand);font-weight:700;font-size:13.5px;
+  padding:9px 18px;border-radius:8px;cursor:pointer;font-family:inherit}
+.btn:hover{opacity:.9}
+.btn.ghost{background:var(--card-2);color:var(--fg-soft);border:1px solid var(--line);font-weight:500}
+.btn.ghost:hover{color:var(--fg);border-color:var(--hover-line)}
+
+.seg-ctrl{display:flex;gap:6px;margin-bottom:12px}
+.seg-ctrl button{flex:1;background:var(--card-2);border:1px solid var(--line);color:var(--fg-soft);
+  padding:8px;border-radius:8px;font-size:13px;cursor:pointer;font-family:inherit;transition:all .15s}
+.seg-ctrl button.on{background:var(--brand-dim);border-color:rgba(26,106,212,.45);color:var(--brand);font-weight:700}
+
+.chks{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+.chks label{display:flex;align-items:center;gap:5px;font-size:13px;color:var(--fg-soft);cursor:pointer}
+.chks input{accent-color:var(--brand);cursor:pointer}
+
+#chart{display:block;width:100%;height:420px;border-radius:10px;background:var(--bg)}
+#stats{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 0}
+.stat-item{background:var(--card-2);border:1px solid var(--line);border-radius:8px;padding:7px 13px;text-align:center;min-width:66px}
+.stat-item b{display:block;font-size:17px;color:var(--brand);line-height:1.25;font-variant-numeric:tabular-nums}
+.stat-item span{font-size:11.5px;color:var(--fg-dim)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--fg-dim);margin-top:14px}
+.legend i{display:inline-block;width:16px;height:0;border-top-width:2px;border-top-style:solid;vertical-align:middle;margin-right:5px}
+.lg-stroke{border-color:var(--brand)}
+.lg-seg{border-color:var(--link)}
+.lg-up{border-color:var(--up)}
+.lg-down{border-color:var(--down)}
+
+.alert{border-radius:8px;padding:11px 14px;font-size:13px;margin:12px 0 0;line-height:1.7}
+.alert-err{background:rgba(217,47,42,.06);border:1px solid rgba(217,47,42,.3);color:#b32621}
+.alert-warn{background:rgba(26,106,212,.07);border:1px solid rgba(26,106,212,.28);color:#15539f}
+#centerBox{margin-top:16px}
+#centerTable{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+#centerTable th,#centerTable td{padding:7px 11px;border-bottom:1px solid var(--line-soft);text-align:left}
+#centerTable th{background:var(--card-2);color:var(--fg);font-size:12.5px;font-weight:600}
+#centerTable td{color:var(--fg-soft);font-variant-numeric:tabular-nums}
+.rules{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:8px;
+  padding:14px 17px;margin:26px 0;font-size:13.5px;color:var(--fg-soft);line-height:1.8}
+.rules b{color:var(--brand)}
+.rules ol{margin:8px 0 0;padding-left:20px}
+.rules li{margin:5px 0}
+</style>
+</head>
+<body>
+
+<header class="site-head"><div class="wrap">
+<a class="logo" href="/"><span class="mark">缠</span>缠论百科</a>
+<nav class="nav">
+<a href="/">首页</a>
+<a href="/terms/">核心词条</a>
+<a href="/lessons/">108课索引</a>
+<a href="/docs/">原版资料</a>
+<a href="/tool/" class="on">画线工具</a>
+</nav>
+<form class="head-search" action="/search/" method="get" onsubmit="return doSearch(event)">
+<input type="search" name="q" placeholder="搜索词条…" aria-label="搜索">
+<button type="submit">搜索</button>
+</form>
+</div></header>
+
+<div class="wrap">
+<div class="crumb"><a href="/">首页</a> / 缠论画线工具</div>
+
+<div class="hero" style="padding:32px 0 26px;border-bottom:none">
+<h1 style="font-size:27px">缠论画线工具</h1>
+<p>粘贴K线数据，自动完成 <strong>包含关系处理 → 分型识别 → 画笔 → 画线段 → 画中枢</strong> 全流程。
+全部计算在你的浏览器本地进行，<strong>数据不会上传到任何服务器</strong>。</p>
+</div>
+
+<div class="tool-grid">
+  <!-- 左栏：输入与设置 -->
+  <div>
+    <div class="panel">
+      <h3>① 输入K线数据</h3>
+      <textarea id="input" spellcheck="false" placeholder="每行一根K线，支持空格 / 逗号 / Tab 分隔：&#10;2026-01-02 10.50 11.20 10.30 11.00&#10;&#10;也可省略日期（自动编号）：&#10;10.50 11.20 10.30 11.00&#10;&#10;列序：日期(可省) 开 高 低 收"></textarea>
+      <p class="hint">列序为 <code>日期 开 高 低 收</code>，日期可省略。支持从行情软件直接复制粘贴。</p>
+      <div class="btn-row">
+        <button class="btn" id="btnRun">解析并标注</button>
+        <button class="btn ghost" id="btnSample">载入示例数据</button>
+        <button class="btn ghost" id="btnClear">清空</button>
+      </div>
+      <div id="errors" class="alert" style="display:none"></div>
+    </div>
+
+    <div class="panel" style="margin-top:14px">
+      <h3>② 笔画标准</h3>
+      <div class="seg-ctrl">
+        <button data-std="new" class="on">新笔（默认）</button>
+        <button data-std="old">老笔（较严）</button>
+      </div>
+      <p class="hint">两套标准的成笔条件不同，画出的笔数、中枢划分都会不一样。
+        <strong style="color:var(--brand)">请全程只用一套</strong>——混用是中枢错乱的头号原因。</p>
+    </div>
+
+    <div class="panel" style="margin-top:14px">
+      <h3>③ 显示图层</h3>
+      <div class="chks">
+        <label><input type="checkbox" data-show="fractal" checked>分型</label>
+        <label><input type="checkbox" data-show="stroke" checked>笔</label>
+        <label><input type="checkbox" data-show="segment" checked>线段</label>
+        <label><input type="checkbox" data-show="center" checked>中枢</label>
+      </div>
+      <div class="btn-row">
+        <button class="btn ghost" id="btnPng">导出 PNG 图片</button>
+        <button class="btn ghost" id="btnJson">导出结构 JSON</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右栏：图表与结果 -->
+  <div>
+    <div class="panel">
+      <canvas id="chart"></canvas>
+      <div class="legend">
+        <span><i class="lg-up"></i>上涨K线</span>
+        <span><i class="lg-down"></i>下跌K线</span>
+        <span><i class="lg-stroke"></i>笔</span>
+        <span><i class="lg-seg"></i>线段</span>
+        <span>▭ 中枢区间</span>
+      </div>
+      <div id="stats"></div>
+    </div>
+    <div class="panel" id="centerBox" style="display:none;margin-top:14px">
+      <h3>识别到的中枢</h3>
+      <table id="centerTable"></table>
+    </div>
+  </div>
+</div>
+
+<div class="rules">
+  <b>本工具使用的判定规则</b>（务必先读，避免把它当成「唯一正确」的画法）
+  <ol>
+    <li><b>包含处理</b>：相邻K线高低点互相包含时按方向合并，向上取高高、向下取低低；方向由前一根相对更前一根的关系确定。</li>
+    <li><b>分型</b>：经包含处理后的三根K线，中间高点最高为顶分型、中间低点最低为底分型。</li>
+    <li><b>笔</b>：顶底分型必须交替。<b>新笔</b>要求相邻分型在合并后K线上间隔 ≥2 根；<b>老笔</b>要求 ≥4 根。两套标准均会因数据而异。</li>
+    <li><b>线段</b>：至少三笔构成，方向由首笔决定。取线段内反向笔的高点序列，出现顶分型（中间最高）即判定线段终结——这是对「特征序列法」的工程化近似，不做特征序列的包含合并。</li>
+    <li><b>中枢</b>：连续三个线段的重叠区间，ZG = min(三段高点)、ZD = max(三段低点)，ZG &gt; ZD 才成立。</li>
+  </ol>
+  <b style="display:block;margin-top:12px">已知局限</b>
+  缠论的笔与线段划分在实盘存在流派分歧，本工具必须二选一、无法兼顾所有版本；自动结果仅供参考，实盘请结合原文与自己的标准核对。<b>本工具只画结构，不提供任何买卖建议。</b>
+</div>
+
+<section>
+<div class="sec-head"><h2>相关词条</h2></div>
+<p class="sec-sub">工具里的每一步判定，都有对应词条解释定义与常见误读。</p>
+<div class="rel">
+<a href="/terms/baohan/">K线包含关系</a>
+<a href="/terms/fenxing/">分型</a>
+<a href="/terms/bi/">笔</a>
+<a href="/terms/xianduan/">线段</a>
+<a href="/terms/tezhengxulie/">特征序列</a>
+<a href="/terms/zhongshu/">中枢</a>
+<a href="/terms/mai3/">第三类买卖点</a>
+<a href="/terms/jiangefenjie/">同级别分解</a>
+</div>
+</section>
+</div>
+
+<footer class="site-foot"><div class="wrap">
+<div class="cols">
+<div class="col"><h4>核心词条</h4>
+<a href="/terms/baohan/">K线包含关系</a><a href="/terms/fenxing/">分型</a><a href="/terms/bi/">笔</a>
+<a href="/terms/xianduan/">线段</a><a href="/terms/tezhengxulie/">特征序列</a><a href="/terms/zhongshu/">中枢</a></div>
+<div class="col"><h4>课程索引</h4>
+<a href="/lessons/">108课全目录</a><a href="/lessons/#g2">第二组 · 笔与中枢</a><a href="/lessons/#g3">第三组 · 买卖点</a></div>
+<div class="col"><h4>资料</h4>
+<a href="/docs/">原版 PDF 下载</a><a href="/about/">关于本站</a></div>
+</div>
+<p class="disclaim"><strong>免责声明：</strong>本工具为学习辅助，自动标注结果不构成投资建议，据此操作风险自负。所有数据仅在浏览器本地处理，不上传、不留存。</p>
+<p>© imaoba.com · 缠论百科</p>
+</div></footer>
+
+<script>
+function doSearch(e){e.preventDefault();var q=(e.target.q.value||"").trim();if(q)location.href="/search/?q="+encodeURIComponent(q);return false;}
+</script>
+<script src="/tool/assets/chan-core.js"></script>
+<script src="/tool/assets/chan-render.js"></script>
+<script src="/tool/assets/tool.js"></script>
+</body></html>

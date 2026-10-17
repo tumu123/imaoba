@@ -1,0 +1,27 @@
+# ---- 开发文件（仅本机使用，不推送到仓库）----
+build.py
+site_data.py
+lesson_detail_*.py
+README-开发版存档.md
+项目交接文档-*.md
+
+# ---- 生成物与临时文件 ----
+imaoba-site.zip
+preview-*.png
+theme-light-check/
+
+# ---- 系统与编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- 凭据保护（务必不要提交）----
+.env
+.env.*
+*.pem
+*_rsa
+*_rsa.pub
