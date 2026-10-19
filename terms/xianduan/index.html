@@ -10,7 +10,7 @@
 <meta property="og:title" content="线段 · 缠论词条 · 缠论百科">
 <meta property="og:description" content="由至少三笔构成、有明确方向的走势单元，是中枢的构件。线段划分是缠论实操中争议最大的环节。">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css?v=202610171334">
+<link rel="stylesheet" href="/assets/style.css?v=202610190902">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "DefinedTerm",
@@ -45,7 +45,7 @@
 <h1>线段</h1>
 <div class="meta"><span class="en">Line Segment</span></div>
 <div class="art-body">
-<h2>基本定义</h2><p>连续三笔且有重叠，方向由第一笔决定。线段被反向线段破坏后才结束。</p><h2>特征序列</h2><p>把线段内的笔按方向分类，同向笔构成特征序列。特征序列出现顶/底分型，即为线段可能终结的信号。</p><ins class="adsbygoogle" style="display:block;text-align:center;margin:28px 0" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4150144052388028" data-ad-slot="9019499027"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script><h2>两种破坏</h2><p>第一种破坏：特征序列出现标准分型；第二种破坏：出现缺口且后续确认。第一种是严格意义上的线段结束，第二种需要更多确认。</p><h2>线段与笔的关系</h2><p>线段至少 3 笔，可能远多于 3 笔。线段是中枢划分的直接依据，判错线段等于判错中枢。</p>
+<h2>基本定义</h2><p>连续三笔且有重叠，方向由第一笔决定。线段被反向线段破坏后才结束。</p><h2>特征序列</h2><p>把线段内的笔按方向分类，同向笔构成特征序列。特征序列出现顶/底分型，即为线段可能终结的信号。</p><h2>两种破坏</h2><p>第一种破坏：特征序列出现标准分型；第二种破坏：出现缺口且后续确认。第一种是严格意义上的线段结束，第二种需要更多确认。</p><h2>线段与笔的关系</h2><p>线段至少 3 笔，可能远多于 3 笔。线段是中枢划分的直接依据，判错线段等于判错中枢。</p>
 </div>
 
 <h2 style="font-size:16.5px;margin:30px 0 9px;padding-left:11px;border-left:3px solid var(--brand)">常见误读对照</h2>
@@ -53,10 +53,10 @@
 <thead><tr><th>常见说法 / 做法</th><th>问题所在</th></tr></thead>
 <tbody><tr><td>把三笔直接当线段</td><td>三笔是必要条件，还需满足方向与重叠要求，并确认未被反向破坏。</td></tr><tr><td>忽略特征序列</td><td>不看特征序列就断言线段结束，是最普遍的误判。</td></tr><tr><td>线段级别混淆</td><td>本级别线段对应次级别走势，混用会导致级别错配。</td></tr></tbody>
 </table>
-
+<div class="ad-slot"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4150144052388028" data-ad-slot="9019499027"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 <h2 style="font-size:16.5px;margin:30px 0 9px;padding-left:11px;border-left:3px solid var(--brand)">相关词条</h2>
 <div class="rel"><a href="/terms/bi/">笔</a><a href="/terms/zhongshu/">中枢</a><a href="/terms/zoushi/">走势类型</a></div>
-<ins class="adsbygoogle" style="display:block;margin:26px 0" data-ad-client="ca-pub-4150144052388028" data-ad-slot="6064751361" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+<div class="ad-slot"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4150144052388028" data-ad-slot="6064751361" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 <div class="note" style="margin-top:30px">
 <b>免责声明：</b>本词条为学习笔记性质的概念整理，不代表原著观点，不构成投资建议。原文请以缠中说禅《教你炒股票》108 课为准。
 </div>
@@ -90,6 +90,23 @@ function doSearch(e){
   head.querySelectorAll('.nav a').forEach(function(a){ a.addEventListener('click',function(){ set(false); }); });
   document.addEventListener('click',function(e){ if(head.classList.contains('open')&&!head.contains(e.target)) set(false); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+(function(){
+  var boxes=document.querySelectorAll('.ad-slot');
+  if(!boxes.length) return;
+  boxes.forEach(function(w){
+    var ins=w.querySelector('ins.adsbygoogle');
+    if(!ins) return;
+    function apply(){
+      var st=ins.getAttribute('data-ad-status');
+      if(st==='unfilled') w.classList.add('is-empty');
+      else if(st==='filled') w.classList.remove('is-empty');
+    }
+    apply();
+    new MutationObserver(apply).observe(ins,{attributes:true,attributeFilter:['data-ad-status']});
+    // 兜底：4 秒后仍未填充（被拦截、大陆网络不可达、无库存）则收起占位，避免留白
+    setTimeout(function(){ if(ins.getAttribute('data-ad-status')!=='filled') w.classList.add('is-empty'); }, 4000);
+  });
 })();
 </script>
 </body></html>

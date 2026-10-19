@@ -10,7 +10,7 @@
 <meta property="og:title" content="核心词条索引 · 缠论百科">
 <meta property="og:description" content="缠论核心概念词条索引：包含关系、分型、笔、线段、中枢、走势类型、背驰、盘整背驰、一二三类买卖点、走势必完美、同级别分解、区间套、特征序列。">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css?v=202610171334">
+<link rel="stylesheet" href="/assets/style.css?v=202610190902">
 <meta name="google-adsense-account" content="ca-pub-4150144052388028"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4150144052388028" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -56,7 +56,7 @@
 <p>连续三个次级别走势的重叠区间。中枢的级别由构成它的次级别走势决定，是整个理论的核心与买卖点的坐标系。</p></article><article class="card">
 <div class="tagline"><span class="tag">宏观分类</span></div>
 <h3><a href="/terms/zoushi/">走势类型</a> <span class="en" style="color:var(--fg-dim);font-size:12.5px;font-style:italic">Trend Type</span></h3>
-<p>市场走势只有三种类型：上涨、下跌、盘整。任何走势都可以被唯一地分解为走势类型的连接。</p></article></div>
+<p>市场走势只有三种类型：上涨、下跌、盘整。任何走势都可以被唯一地分解为走势类型的连接。</p></article><div class="ad-slot ad-feed"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-4150144052388028" data-ad-slot="7986662535"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div></div>
 </section><section>
 <div class="sec-head"><h2>买卖点与操作</h2><span class="more">6 条</span></div>
 <p class="sec-sub">三类买卖点是操作体系，盘整背驰决定震荡区间的做法。</p>
@@ -95,7 +95,7 @@
 <div class="tagline"><span class="tag">线段判定</span></div>
 <h3><a href="/terms/tezhengxulie/">特征序列</a> <span class="en" style="color:var(--fg-dim);font-size:12.5px;font-style:italic">Characteristic Sequence</span></h3>
 <p>把线段内部的笔按方向分类后构成的序列。特征序列出现分型，是判断线段终结的关键信号，也是实时判定中最实用的一环。</p></article></div>
-</section><ins class="adsbygoogle" style="display:block;margin:28px 0" data-ad-format="autorelaxed" data-ad-client="ca-pub-4150144052388028" data-ad-slot="3494482248"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</section>
 </div>
 <footer class="site-foot"><div class="wrap">
 <div class="cols">
@@ -125,6 +125,23 @@ function doSearch(e){
   head.querySelectorAll('.nav a').forEach(function(a){ a.addEventListener('click',function(){ set(false); }); });
   document.addEventListener('click',function(e){ if(head.classList.contains('open')&&!head.contains(e.target)) set(false); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+(function(){
+  var boxes=document.querySelectorAll('.ad-slot');
+  if(!boxes.length) return;
+  boxes.forEach(function(w){
+    var ins=w.querySelector('ins.adsbygoogle');
+    if(!ins) return;
+    function apply(){
+      var st=ins.getAttribute('data-ad-status');
+      if(st==='unfilled') w.classList.add('is-empty');
+      else if(st==='filled') w.classList.remove('is-empty');
+    }
+    apply();
+    new MutationObserver(apply).observe(ins,{attributes:true,attributeFilter:['data-ad-status']});
+    // 兜底：4 秒后仍未填充（被拦截、大陆网络不可达、无库存）则收起占位，避免留白
+    setTimeout(function(){ if(ins.getAttribute('data-ad-status')!=='filled') w.classList.add('is-empty'); }, 4000);
+  });
 })();
 </script>
 </body></html>

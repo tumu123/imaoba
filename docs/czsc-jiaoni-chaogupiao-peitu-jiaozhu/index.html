@@ -10,7 +10,7 @@
 <meta property="og:title" content="缠中说禅：教你炒股票 · 配图校注版 下载 · 缠论百科">
 <meta property="og:description" content="缠中说禅：教你炒股票 · 配图校注版（PDF，429 页，102.7 MB）。带配图与文字校注的全本，原文之后附校订说明，配图为高清图片。 含版本说明、注意事项与下载入口。">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css?v=202610171334">
+<link rel="stylesheet" href="/assets/style.css?v=202610190902">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Book",
@@ -96,6 +96,23 @@ function doSearch(e){
   head.querySelectorAll('.nav a').forEach(function(a){ a.addEventListener('click',function(){ set(false); }); });
   document.addEventListener('click',function(e){ if(head.classList.contains('open')&&!head.contains(e.target)) set(false); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+(function(){
+  var boxes=document.querySelectorAll('.ad-slot');
+  if(!boxes.length) return;
+  boxes.forEach(function(w){
+    var ins=w.querySelector('ins.adsbygoogle');
+    if(!ins) return;
+    function apply(){
+      var st=ins.getAttribute('data-ad-status');
+      if(st==='unfilled') w.classList.add('is-empty');
+      else if(st==='filled') w.classList.remove('is-empty');
+    }
+    apply();
+    new MutationObserver(apply).observe(ins,{attributes:true,attributeFilter:['data-ad-status']});
+    // 兜底：4 秒后仍未填充（被拦截、大陆网络不可达、无库存）则收起占位，避免留白
+    setTimeout(function(){ if(ins.getAttribute('data-ad-status')!=='filled') w.classList.add('is-empty'); }, 4000);
+  });
 })();
 </script>
 </body></html>

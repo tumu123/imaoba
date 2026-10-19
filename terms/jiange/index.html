@@ -10,7 +10,7 @@
 <meta property="og:title" content="区间套与级别 · 缠论词条 · 缠论百科">
 <meta property="og:description" content="用低级别的背驰来确认高级别背驰的方法，可把买卖点逐步收敛到更精确的区间。级别是缠论区别于其他技术分析的根本。">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css?v=202610171334">
+<link rel="stylesheet" href="/assets/style.css?v=202610190902">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "DefinedTerm",
@@ -45,7 +45,7 @@
 <h1>区间套与级别</h1>
 <div class="meta"><span class="en">Nested Intervals</span></div>
 <div class="art-body">
-<h2>级别从何而来</h2><p>级别由递归构成，不是简单的时间周期。1分钟走势递归出5分钟，5分钟递归出30分钟。同一段K线在不同级别下是完全不同的结构。</p><h2>区间套原理</h2><p>高级别出现背驰嫌疑时，切到低级别找该段的内部背驰；若低级别也背驰，则高级别背驰的确定性大幅提升。理论上可逐级收敛直到最小级别。</p><ins class="adsbygoogle" style="display:block;text-align:center;margin:28px 0" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4150144052388028" data-ad-slot="9019499027"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script><h2>实操步骤</h2><p>①高级别识别背驰段 → ②切到次级别拆解该段 → ③次级别背驰出现即准备介入 → ④以结构破坏点设止损。</p><h2>注意</h2><p>区间套是「提高确认度」的工具，不是「精确预测点位」的工具。逐级收敛的操作成本很高，适合大级别、大资金。</p>
+<h2>级别从何而来</h2><p>级别由递归构成，不是简单的时间周期。1分钟走势递归出5分钟，5分钟递归出30分钟。同一段K线在不同级别下是完全不同的结构。</p><h2>区间套原理</h2><p>高级别出现背驰嫌疑时，切到低级别找该段的内部背驰；若低级别也背驰，则高级别背驰的确定性大幅提升。理论上可逐级收敛直到最小级别。</p><h2>实操步骤</h2><p>①高级别识别背驰段 → ②切到次级别拆解该段 → ③次级别背驰出现即准备介入 → ④以结构破坏点设止损。</p><h2>注意</h2><p>区间套是「提高确认度」的工具，不是「精确预测点位」的工具。逐级收敛的操作成本很高，适合大级别、大资金。</p>
 </div>
 
 <h2 style="font-size:16.5px;margin:30px 0 9px;padding-left:11px;border-left:3px solid var(--brand)">常见误读对照</h2>
@@ -53,10 +53,10 @@
 <thead><tr><th>常见说法 / 做法</th><th>问题所在</th></tr></thead>
 <tbody><tr><td>认为级别 = 时间周期</td><td>1分钟图和5分钟图不是两个独立级别，级别由构成关系递归决定。</td></tr><tr><td>无限往下套</td><td>级别越细，噪声越大，逐级套到极低周期反而失去意义。</td></tr></tbody>
 </table>
-
+<div class="ad-slot"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4150144052388028" data-ad-slot="9019499027"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 <h2 style="font-size:16.5px;margin:30px 0 9px;padding-left:11px;border-left:3px solid var(--brand)">相关词条</h2>
 <div class="rel"><a href="/terms/beichi/">背驰</a><a href="/terms/zoushi/">走势类型</a><a href="/terms/zhongshu/">中枢</a></div>
-<ins class="adsbygoogle" style="display:block;margin:26px 0" data-ad-client="ca-pub-4150144052388028" data-ad-slot="6064751361" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+<div class="ad-slot"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4150144052388028" data-ad-slot="6064751361" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 <div class="note" style="margin-top:30px">
 <b>免责声明：</b>本词条为学习笔记性质的概念整理，不代表原著观点，不构成投资建议。原文请以缠中说禅《教你炒股票》108 课为准。
 </div>
@@ -90,6 +90,23 @@ function doSearch(e){
   head.querySelectorAll('.nav a').forEach(function(a){ a.addEventListener('click',function(){ set(false); }); });
   document.addEventListener('click',function(e){ if(head.classList.contains('open')&&!head.contains(e.target)) set(false); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
+})();
+(function(){
+  var boxes=document.querySelectorAll('.ad-slot');
+  if(!boxes.length) return;
+  boxes.forEach(function(w){
+    var ins=w.querySelector('ins.adsbygoogle');
+    if(!ins) return;
+    function apply(){
+      var st=ins.getAttribute('data-ad-status');
+      if(st==='unfilled') w.classList.add('is-empty');
+      else if(st==='filled') w.classList.remove('is-empty');
+    }
+    apply();
+    new MutationObserver(apply).observe(ins,{attributes:true,attributeFilter:['data-ad-status']});
+    // 兜底：4 秒后仍未填充（被拦截、大陆网络不可达、无库存）则收起占位，避免留白
+    setTimeout(function(){ if(ins.getAttribute('data-ad-status')!=='filled') w.classList.add('is-empty'); }, 4000);
+  });
 })();
 </script>
 </body></html>
