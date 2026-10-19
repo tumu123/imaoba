@@ -6,3 +6,9 @@
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
+
+/tool/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/tool/index.html
+  Cache-Control: public, max-age=0, must-revalidate
