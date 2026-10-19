@@ -10,7 +10,7 @@
 <meta property="og:title" content="K线包含关系 · 缠论词条 · 缠论百科">
 <meta property="og:description" content="相邻K线高低点互相包含时的合并规则，是画分型、画笔之前必须完成的预处理步骤。">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css?v=202610190902">
+<link rel="stylesheet" href="/assets/style.css?v=202610190919">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "DefinedTerm",
@@ -45,7 +45,7 @@
 <h1>K线包含关系</h1>
 <div class="meta"><span class="en">Inclusion</span></div>
 <div class="art-body">
-<h2>判定</h2><p>K线A包含K线B：A.high ≥ B.high 且 A.low ≤ B.low。满足即需合并。</p><h2>合并方向</h2><p>按前一处理方向决定：向上时取 max(high)、max(low)；向下时取 min(high)、min(low)。方向由前一根已处理K线相对于更前一根的关系确定。</p><h2>为什么必须做</h2><p>不做包含处理，笔的定义（至少5根）会被无意义地放大或缩小，导致不同人画出不同的笔。这是缠论实盘分歧的主要来源之一。</p>
+<h2>判定</h2><p>K线A包含K线B：A.high ≥ B.high 且 A.low ≤ B.low。满足即需合并。</p><h2>合并方向</h2><p>按前一处理方向决定：向上时取 max(high)、max(low)；向下时取 min(high)、min(low)。方向由前一根已处理K线相对于更前一根的关系确定。</p><h2>为什么必须做</h2><p>不做包含处理，笔的定义（至少5根）会被无意义地放大或缩小，导致不同人画出不同的笔。这是缠论实盘分歧的主要来源之一。</p><h2>包含关系为什么必须先处理</h2><p>缠论的整套结构建立在「相邻K线之间高低点不互相包含」这个前提上。原始K线里大量存在包含关系，一旦不处理，<b>分型会被误判、笔会虚增、中枢区间会算错</b>。举个典型例子：上涨途中两根小K线被第三根吞掉，如果不做包含合并，中间那根可能被读成一个「顶分型」，于是凭空多出一条向下的笔，后面的中枢位置全部偏移。所以包含处理不是可选步骤，而是所有结构判断之前的强制性预处理。</p><h2>向上处理与向下处理</h2><p>处理方向由<b>包含关系出现前的走势方向</b>决定，不是由这两根K线本身决定。<br>① <b>向上处理</b>（前一段是上升）：合并后取「高点取高、低点也取高」，即 <code>高=max(高1,高2)</code>、<code>低=max(低1,低2)</code>。<br>② <b>向下处理</b>（前一段是下降）：合并后取「高点取低、低点也取低」，即 <code>高=min(高1,高2)</code>、<code>低=min(低1,低2)</code>。<br>方向判断看的是<b>被包含K线之前那一根</b>与前一根的关系，而不是合并后的结果。合并产生的新K线要立刻与后一根继续比较，可能连续合并三根、四根，直到不再包含为止。</p><div class="ad-slot"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4150144052388028" data-ad-slot="9019499027"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div><h2>三个高频错误</h2><p>① <b>方向判错</b>：包含前的走势其实是下跌，却按向上处理，整段结构从此错位。判断口诀是「看包含发生之前那一笔的方向」。<br>② <b>漏做连锁合并</b>：只合并一次就往下走，实际上合并后的新K线仍与后一根包含。<br>③ <b>用未复权数据</b>：除权除息日的前后价格不可比，会在除权缺口处制造假的包含与假的顶底。做日线以上级别分析前务必使用前复权数据。</p><h2>处理完的验证方法</h2><p>最简单的验证：把处理后的K线序列逐对检查，<b>任意相邻两根都不应出现一方完全包含另一方</b>（高不高于对方且低不低于对方）。另外可以数一下合并前后的数量：正常行情下合并比例在 20%–40% 之间，若某段行情合并掉了 60% 以上，往往是数据有问题或方向判错。合并只影响「结构判断用的K线」，不影响真实成交价，因此止损位仍应参考实际价格，不能直接用合并后的高低点。</p><h2>示例：一次向上包含的连锁合并</h2><p>设前三根 K 线为：K1 高 10.20/低 9.80，K2 高 10.35/低 9.95（高于 K1，向上），K3 高 10.30/低 10.00。K3 完全被 K2 包含（高更低、低更高），且此前方向为向上，因此按向上处理：新高 = max(10.35,10.30)=10.35，新低 = max(9.95,10.00)=10.00，合并后的 K 线为 10.35/10.00。合并结果继续与 K4 比较，若 K4 又落在该区间内，则继续合并。常见的错误是直接取「高取高、低取低」，那会把方向处理成向下，后面的分型全部错位。</p>
 </div>
 
 <h2 style="font-size:16.5px;margin:30px 0 9px;padding-left:11px;border-left:3px solid var(--brand)">常见误读对照</h2>
@@ -53,7 +53,6 @@
 <thead><tr><th>常见说法 / 做法</th><th>问题所在</th></tr></thead>
 <tbody><tr><td>用简单平均合并</td><td>包含处理是取极值，不是取平均。</td></tr><tr><td>忽略方向导致反复</td><td>方向判断错误会让合并结果来回震荡。</td></tr></tbody>
 </table>
-<div class="ad-slot"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4150144052388028" data-ad-slot="9019499027"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 <h2 style="font-size:16.5px;margin:30px 0 9px;padding-left:11px;border-left:3px solid var(--brand)">相关词条</h2>
 <div class="rel"><a href="/terms/fenxing/">分型</a><a href="/terms/bi/">笔</a></div>
 <div class="ad-slot"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4150144052388028" data-ad-slot="6064751361" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
