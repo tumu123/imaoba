@@ -5,18 +5,18 @@
   'use strict';
 
   var COLORS = {
-    bg: '#ffffff',
-    grid: '#e9eff7',
-    gridText: '#7b8a9e',
-    up: '#d92f2a',      // 中国习惯：涨红
-    down: '#0f9d58',    // 跌绿
-    stroke: '#1a6ad4',  // 笔：蓝色主色
-    segment: '#8a4fd6', // 线段：紫色（与笔区分）
-    center: 'rgba(138,79,214,0.08)',
-    centerLine: 'rgba(138,79,214,0.70)',
-    topMark: '#d92f2a',
-    bottomMark: '#0f9d58',
-    fractalTxt: '#4e5f76'
+    bg: '#0d1117',
+    grid: '#1e2836',
+    gridText: '#6e7d8f',
+    up: '#f0524d',      // 中国习惯：涨红
+    down: '#26a269',    // 跌绿
+    stroke: '#e8b94a',  // 笔：金色
+    segment: '#7db8ff', // 线段：蓝色
+    center: 'rgba(125,184,255,0.10)',
+    centerLine: 'rgba(125,184,255,0.75)',
+    topMark: '#f0524d',
+    bottomMark: '#26a269',
+    fractalTxt: '#a9b6c4'
   };
 
   function render(canvas, data, opts) {

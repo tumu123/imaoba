@@ -118,9 +118,9 @@
       var dpr = window.devicePixelRatio || 1;
       c.width = c.clientWidth * dpr; c.height = 420 * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      ctx.fillStyle = '#ffffff';
+      ctx.fillStyle = '#0d1117';
       ctx.fillRect(0, 0, c.clientWidth, 420);
-      ctx.fillStyle = '#7b8a9e';
+      ctx.fillStyle = '#6e7d8f';
       ctx.font = '14px -apple-system, sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText('点击「载入示例数据」或粘贴K线数据后开始', c.clientWidth / 2, 210);

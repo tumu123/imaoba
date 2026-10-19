@@ -1,18 +1,18 @@
 /* ===== 缠论百科 全站样式 ===== */
 :root{
-  /* 明亮配色（2026-10-17 由深色+金色改为浅底蓝主色，仅改颜色，其余未动） */
-  --bg:#f7f9fc; --bg-soft:#eef2f8; --card:#ffffff; --card-2:#f2f5fa;
-  --line:#dde5ef; --line-soft:#e9eff7;
-  --fg:#1b2637; --fg-soft:#4e5f76; --fg-dim:#7b8a9e;
-  --brand:#1a6ad4; --brand-dim:rgba(26,106,212,.10);
-  --up:#d92f2a; --down:#0f9d58;
-  --link:#0f62c9;
-  --on-brand:#ffffff;
-  --head-bg:rgba(255,255,255,.92);
-  --hover-line:#b9cbe4;
+  /* 深色 + 金色（2026-10-19 按用户要求由浅底蓝主色还原） */
+  --bg:#0d1117; --bg-soft:#131a23; --card:#161d27; --card-2:#1b2430;
+  --line:#243040; --line-soft:#1e2836;
+  --fg:#e6edf3; --fg-soft:#a9b6c4; --fg-dim:#6e7d8f;
+  --brand:#e8b94a; --brand-dim:rgba(232,185,74,.12);
+  --up:#f0524d; --down:#26a269;
+  --link:#7db8ff;
+  --on-brand:#1a1405;
+  --head-bg:rgba(13,17,23,.92);
+  --hover-line:#33445a;
   --radius:10px;
   --maxw:1180px;
-  color-scheme:light;
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -30,7 +30,7 @@ a:hover{text-decoration:underline}
 .site-head .wrap{display:flex;align-items:center;gap:22px;height:58px}
 .logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:17px;color:var(--fg);letter-spacing:.5px}
 .logo:hover{text-decoration:none}
-.logo .mark{width:24px;height:24px;border-radius:6px;background:linear-gradient(135deg,var(--brand),#0d4fa8);display:grid;place-items:center;color:var(--on-brand);font-size:13px;font-weight:900}
+.logo .mark{width:24px;height:24px;border-radius:6px;background:linear-gradient(135deg,var(--brand),#c2921f);display:grid;place-items:center;color:var(--on-brand);font-size:13px;font-weight:900}
 .nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
 .nav a{color:var(--fg-soft);padding:6px 11px;border-radius:7px;font-size:14px}
 .nav a:hover{background:var(--card);color:var(--fg);text-decoration:none}
@@ -77,7 +77,7 @@ section+section{border-top:1px solid var(--line-soft)}
 .card p{margin:0;color:var(--fg-soft);font-size:13.5px;line-height:1.68}
 .card .tagline{margin-bottom:9px}
 
-.tag{display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:20px;background:var(--brand-dim);color:var(--brand);border:1px solid rgba(26,106,212,.24)}
+.tag{display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:20px;background:var(--brand-dim);color:var(--brand);border:1px solid rgba(232,185,74,.22)}
 .tag.grey{background:var(--card-2);color:var(--fg-dim);border-color:var(--line)}
 
 /* ---- lesson list ---- */
@@ -143,18 +143,18 @@ td:first-child{color:var(--fg);width:44%}
   padding:6px 15px;border-radius:20px;font-size:13.5px;cursor:pointer;font-family:inherit;
   transition:all .15s}
 .fbtn:hover{border-color:var(--hover-line);color:var(--fg)}
-.fbtn.on{background:var(--brand-dim);border-color:rgba(26,106,212,.45);color:var(--brand);font-weight:600}
+.fbtn.on{background:var(--brand-dim);border-color:rgba(232,185,74,.45);color:var(--brand);font-weight:600}
 
 /* 下载框 */
 .dl-box{display:flex;align-items:center;gap:18px;flex-wrap:wrap;
-  background:linear-gradient(135deg,rgba(26,106,212,.07),rgba(26,106,212,.02));
-  border:1px solid rgba(26,106,212,.28);border-radius:12px;padding:18px 22px;margin:22px 0 8px}
+  background:linear-gradient(135deg,rgba(232,185,74,.09),rgba(232,185,74,.03));
+  border:1px solid rgba(232,185,74,.28);border-radius:12px;padding:18px 22px;margin:22px 0 8px}
 .dl-info{flex:1;min-width:200px}
 .dl-host{font-size:15px;font-weight:600;color:var(--fg)}
 .dl-note{font-size:12.5px;color:var(--fg-dim);margin-top:3px}
 .dl-btn{background:var(--brand);color:var(--on-brand);font-weight:700;font-size:15px;
   padding:12px 26px;border-radius:9px;white-space:nowrap;transition:transform .12s,box-shadow .12s}
-.dl-btn:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 4px 16px rgba(26,106,212,.28)}
+.dl-btn:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 4px 16px rgba(232,185,74,.28)}
 @media(max-width:560px){.dl-box{flex-direction:column;align-items:stretch}.dl-btn{text-align:center}}
 
 /* ---- footer ---- */
@@ -182,7 +182,7 @@ ul.clean li{margin:5px 0}
   .head-search input{width:100%;min-width:0}
   .nav{order:4;position:absolute;left:0;right:0;top:100%;display:none;flex-direction:column;flex-wrap:nowrap;
        gap:0;padding:4px 14px 10px;background:var(--card);border-bottom:1px solid var(--line);
-       box-shadow:0 12px 26px rgba(20,35,60,.12);max-height:calc(100vh - 56px);overflow-y:auto}
+       box-shadow:0 12px 26px rgba(0,0,0,.55);max-height:calc(100vh - 56px);overflow-y:auto}
   .site-head.open .nav{display:flex}
   .nav a{padding:12px 8px;font-size:15px;border-radius:0;border-bottom:1px solid var(--line-soft)}
   .nav a:last-child{border-bottom:0}
