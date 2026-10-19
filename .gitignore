@@ -25,3 +25,7 @@ desktop.ini
 *.pem
 *_rsa
 *_rsa.pub
+
+# ---- 词条扩写模块（仅本机，源码不上仓库）----
+term_expand.py
+term_examples.py
