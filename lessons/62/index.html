@@ -10,8 +10,8 @@
 <meta property="og:title" content="缠论第62课 · 走势分解的唯一性定理 · 要点提纲 · 缠论百科">
 <meta property="og:description" content="缠中说禅《教你炒股票》第62课「走势分解的唯一性定理」核心论点、关键要点与常见疑问。为什么同级别分解结果是唯一的。">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css?v=202611251451">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://imaoba.com/lessons/62/#article","headline":"缠论第 62 课：走势分解的唯一性定理","url":"https://imaoba.com/lessons/62/","description":"缠中说禅《教你炒股票》第 62 课「走势分解的唯一性定理」的核心论点、关键要点与常见疑问。为什么同级别分解结果是唯一的。","inLanguage":"zh-CN","isPartOf":{"@id":"https://imaoba.com/#website"},"publisher":{"@id":"https://imaoba.com/#org"},"dateModified":"2026-11-25","about":[{"@type":"Thing","name":"缠论"},{"@type":"Thing","name":"走势分解的唯一性定理"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://imaoba.com/"},{"@type":"ListItem","position":2,"name":"108课索引","item":"https://imaoba.com/lessons/"},{"@type":"ListItem","position":3,"name":"第 62 课"}]},{"@type":"FAQPage","@id":"https://imaoba.com/lessons/62/#faq","mainEntity":[{"@type":"Question","name":"实盘为什么经常出现不同结论？","acceptedAnswer":{"@type":"Answer","text":"多数是笔或线段的画法不同，而不是定理失效。统一画法是解决之道。"}}]}]}</script><meta name="google-adsense-account" content="ca-pub-4150144052388028"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4150144052388028" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/style.css?v=202611251458">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://imaoba.com/lessons/62/#article","headline":"缠论第 62 课：走势分解的唯一性定理","url":"https://imaoba.com/lessons/62/","description":"缠中说禅《教你炒股票》第 62 课「走势分解的唯一性定理」的核心论点、关键要点与常见疑问。为什么同级别分解结果是唯一的。","inLanguage":"zh-CN","isPartOf":{"@id":"https://imaoba.com/#website"},"publisher":{"@id":"https://imaoba.com/#org"},"dateModified":"2026-11-25","about":[{"@type":"Thing","name":"缠论"},{"@type":"Thing","name":"走势分解的唯一性定理"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://imaoba.com/"},{"@type":"ListItem","position":2,"name":"108课索引","item":"https://imaoba.com/lessons/"},{"@type":"ListItem","position":3,"name":"第 62 课"}]},{"@type":"FAQPage","@id":"https://imaoba.com/lessons/62/#faq","mainEntity":[{"@type":"Question","name":"实盘为什么经常出现不同结论？","acceptedAnswer":{"@type":"Answer","text":"多数是笔或线段的画法不同，而不是定理失效。统一画法是解决之道。"}},{"@type":"Question","name":"唯一性是不是意味着争论一定有对错？","acceptedAnswer":{"@type":"Answer","text":"在口径统一的前提下有对错，而且能定位到具体哪一笔；口径不统一时争论没有意义，只是两套规则各自运行。所以先问口径，再问对错。"}},{"@type":"Question","name":"唯一性对程序化实现意味着什么？","acceptedAnswer":{"@type":"Answer","text":"意味着可以写成确定性算法：同样输入必然得到同样输出，不需要人工干预。这正是第 87 课讨论可行性的基础，也是它比形态识别更适合编码的原因——形态可以见仁见智，划分不能。"}}]}]}</script><meta name="google-adsense-account" content="ca-pub-4150144052388028"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4150144052388028" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-head"><div class="wrap">
@@ -37,20 +37,20 @@
 <div class="meta"><span class="upd">最后更新 2026年11月25日</span></div>
 <div class="art-body">
 <p style="color:var(--fg-dim);font-size:13.5px;margin-bottom:4px">为什么同级别分解结果是唯一的。</p>
-
+<p class="lesson-q"><b>本课要解决的问题</b>　唯一性定理是整套体系能被讨论的前提，但它不是无条件成立的。这一课说清它依赖什么、在什么范围内有效，以及两人结论不一致时该按什么顺序排查。</p>
 <div class="note" style="margin:18px 0 4px"><b>核心论点</b><br>走势分解的唯一性定理：在同级别分解下，分解结果是唯一的。</div>
 <h2>关键要点</h2><ul class="clean"><li>唯一性建立在「笔线段画法已确认」的基础上。</li><li>唯一性保证不同人面对同一张图能得出可对齐的结论。</li><li>实盘差异来自画法不统一，而非定理有误。</li><li>这是理论从「经验」变为「体系」的关键一步。</li></ul>
-
-
-<h2>常见疑问</h2><div class="qa-block"><h3 class="qa-q">实盘为什么经常出现不同结论？</h3><p>多数是笔或线段的画法不同，而不是定理失效。统一画法是解决之道。</p></div>
+<h2>推导与边界</h2><ul class="clean"><li>定理的表述：在给定级别、给定画法口径（包含处理规则、成笔条件、线段划分标准）的前提下，一段走势的同级别分解结果是唯一的。</li><li>三个前提缺一不可：级别已确定、口径已固定、分解边界取在已完成的结构上。少一条，唯一性就不成立，但这不叫定理失效，叫条件不满足。</li><li>唯一性不等于只有一种正确分法。它说的是在同一套规则下只有一种结果；规则换了结果自然可以不同，这属于换了一套体系，不是在反驳定理。</li><li>为什么非要它：分解不唯一，段与段就不可比；不可比，力度就没有定义；没有力度，背驰与买卖点全部悬空。整条链的第一环就在这里。</li><li>实用价值是排除：两人结论不同时，按固定顺序核对三件事——级别是否一样、口径是否一样、边界是否取在同一处。三样都同还对不上，才说明有人画错了。</li><li>未完成走势是唯一的例外区：正在生长的最后一段无法唯一确定，必须等结构完成。这不是定理的漏洞，是它的适用范围本来就不含未完成段。</li><li>唯一性不保证正确性：唯一的结果也可能是错的（口径本身有偏差），但它至少可检验、可复现，能被逐笔核对定位。</li></ul>
+<h2>归因清单</h2><div class="example-box"><p>同一段日线走势，两人给出不同分解结果，按顺序归因：<br>① 甲按新笔、乙按老笔 → 口径不同，不构成反例，先统一口径再谈；<br>② 甲用日线级别、乙用 30 分钟级别 → 讨论的不是同一个对象，先对齐级别；<br>③ 口径与级别都相同，结果仍不一致 → 至少一方在包含处理或特征序列上画错，可逐笔核对定位到具体那一笔。<br>顺序不能颠倒：先排口径，再排级别，最后才怀疑画法。多数争论在第一步就能解决，剩下的才值得逐笔对账。</p></div>
+<h2>常见疑问</h2><div class="qa-block"><h3 class="qa-q">实盘为什么经常出现不同结论？</h3><p>多数是笔或线段的画法不同，而不是定理失效。统一画法是解决之道。</p><h3 class="qa-q">唯一性是不是意味着争论一定有对错？</h3><p>在口径统一的前提下有对错，而且能定位到具体哪一笔；口径不统一时争论没有意义，只是两套规则各自运行。所以先问口径，再问对错。</p><h3 class="qa-q">唯一性对程序化实现意味着什么？</h3><p>意味着可以写成确定性算法：同样输入必然得到同样输出，不需要人工干预。这正是第 87 课讨论可行性的基础，也是它比形态识别更适合编码的原因——形态可以见仁见智，划分不能。</p></div>
 <h2>本课涉及的概念</h2><ul class="clean term-brief"><li><a href="/terms/jiangefenjie/">同级别分解</a><span>把任意复杂走势，按同一级别拆解成可互相比较的走势单元。它是判断背驰、定位买卖点的必要前提。</span></li><li><a href="/terms/zoushi/">走势类型</a><span>市场走势只有三种类型：上涨、下跌、盘整。任何走势都可以被唯一地分解为走势类型的连接。</span></li><li><a href="/terms/tezhengxulie/">特征序列</a><span>把线段内部的笔按方向分类后构成的序列。特征序列出现分型，是判断线段终结的关键信号，也是实时判定中最实用的一环。</span></li></ul>
 <h2>前后课衔接</h2><ul class="clean"><li>上一课 <a href="/lessons/61/">第 61 课 · 市场哲学的数学原理（导论）</a>：把走势当集合分解，是全书的方法论内核。</li><li>下一课 <a href="/lessons/63/">第 63 课 · 递归与自相似</a>：分形结构在市场中的体现。</li></ul>
 <h2>所属分组</h2>
 <p>第四组 · 实战与哲学（第 61–108 课）。后半部分含大量实盘复盘与市场哲学，与前面的结构体系互为表里。</p>
-
+<div class="def-box sum-box"><span class="def-k">一句话总结</span><p>唯一性依赖三个前提：级别已定、口径已固定、边界取在已完成结构上；它排除随意解释，不保证结论正确。</p></div>
 <h2>阅读建议</h2>
 <p>先读完本课原文，再对照上面的要点提纲。原文中的概念常跨课出现，遇到不确定的定义可直接点击「本课涉及的概念」查看词条页，那里有严格定义与常见误读对照。</p>
-
+<p class="lesson-link">分解唯一之后，下一个问题是这套结构在不同级别上为什么长得一样——63 课。</p>
 </div>
 <div class="rel" style="margin-top:24px"><a href="/lessons/61/">← 第 61 课</a><a href="/lessons/63/">第 63 课 →</a><a href="/lessons/">全部目录</a></div>
 <div class="ad-slot"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4150144052388028" data-ad-slot="6072699655" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div><div class="note" style="margin-top:26px">

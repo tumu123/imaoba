@@ -10,8 +10,8 @@
 <meta property="og:title" content="缠论第71课 · 区间套定理 · 要点提纲 · 缠论百科">
 <meta property="og:description" content="缠中说禅《教你炒股票》第71课「区间套定理」核心论点、关键要点与常见疑问。逐级收敛的确认方法。">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css?v=202611251451">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://imaoba.com/lessons/71/#article","headline":"缠论第 71 课：区间套定理","url":"https://imaoba.com/lessons/71/","description":"缠中说禅《教你炒股票》第 71 课「区间套定理」的核心论点、关键要点与常见疑问。逐级收敛的确认方法。","inLanguage":"zh-CN","isPartOf":{"@id":"https://imaoba.com/#website"},"publisher":{"@id":"https://imaoba.com/#org"},"dateModified":"2026-11-25","about":[{"@type":"Thing","name":"缠论"},{"@type":"Thing","name":"区间套定理"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://imaoba.com/"},{"@type":"ListItem","position":2,"name":"108课索引","item":"https://imaoba.com/lessons/"},{"@type":"ListItem","position":3,"name":"第 71 课"}]}]}</script><meta name="google-adsense-account" content="ca-pub-4150144052388028"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4150144052388028" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/style.css?v=202611251458">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://imaoba.com/lessons/71/#article","headline":"缠论第 71 课：区间套定理","url":"https://imaoba.com/lessons/71/","description":"缠中说禅《教你炒股票》第 71 课「区间套定理」的核心论点、关键要点与常见疑问。逐级收敛的确认方法。","inLanguage":"zh-CN","isPartOf":{"@id":"https://imaoba.com/#website"},"publisher":{"@id":"https://imaoba.com/#org"},"dateModified":"2026-11-25","about":[{"@type":"Thing","name":"缠论"},{"@type":"Thing","name":"区间套定理"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://imaoba.com/"},{"@type":"ListItem","position":2,"name":"108课索引","item":"https://imaoba.com/lessons/"},{"@type":"ListItem","position":3,"name":"第 71 课"}]},{"@type":"FAQPage","@id":"https://imaoba.com/lessons/71/#faq","mainEntity":[{"@type":"Question","name":"高级别有背驰，次级别一直不背驰，要一直等下去吗？","acceptedAnswer":{"@type":"Answer","text":"不等。事先设定时间或级别上限，到限就放弃这次机会，把「末段仍在延伸」写进记录。无限等待是把区间套当成了必然成功的流程，这是它最贵的误用方式。"}},{"@type":"Question","name":"区间套能不能用来找精确的入场点？","acceptedAnswer":{"@type":"Answer","text":"不能。它给的是更小的区间，不是一个价格。要在区间内下单仍需自己定规则——分批、或等突破区间边界确认。这部分属于资金管理，不属于区间套。"}}]}]}</script><meta name="google-adsense-account" content="ca-pub-4150144052388028"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4150144052388028" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-head"><div class="wrap">
@@ -37,20 +37,20 @@
 <div class="meta"><span class="upd">最后更新 2026年11月25日</span></div>
 <div class="art-body">
 <p style="color:var(--fg-dim);font-size:13.5px;margin-bottom:4px">逐级收敛的确认方法。</p>
-
+<p class="lesson-q"><b>本课要解决的问题</b>　第 41 课讲了区间套怎么操作，这一课回答它为什么能成立：逐级下沉的路径凭什么一定存在，又凭什么一定会终止。</p>
 <div class="note" style="margin:18px 0 4px"><b>核心论点</b><br>区间套定理：逐级收敛的确认方法，保证买卖点可被逐步精确化。</div>
 <h2>关键要点</h2><ul class="clean"><li>高级别背驰段内部，必存在次级别的背驰确认路径。</li><li>逐级下沉可把介入区间收窄。</li><li>下沉有成本：级别越细，噪声与手续费占比越高。</li><li>适用场景是较大级别、较大资金的操作。</li></ul>
-
-
-
+<h2>推导与边界</h2><ul class="clean"><li>定理要保证两件事：存在性——高级别背驰段内部必然能在次级别找到对应结构；终止性——下沉到某一级必然停止。</li><li>存在性的依据是递归定义：高级别的末段本身就是由若干次级别走势连接而成，所以它内部必然有次级别结构。不是「也许有」，是「一定有」。</li><li>但「有结构」不等于「有背驰」：次级别可能一路延伸而不背驰。此时路径存在、结论不出现——这是区间套最常见的落空方式。</li><li>终止性的依据是递归有底：下沉到最小可用周期必须停（数据精度与交易成本）。无底的递归在数学上可以无限进行，在交易上毫无意义。</li><li>落空也是一种信息：次级别不背驰说明高级别末段还有延伸空间。这个判断本身有用，它让你不去抢那一段。</li><li>收敛的是范围不是点位：每下沉一级，背驰成立的价格区间缩小一圈，但永远不会缩成一个点。把它当精确点位工具，一定失望。</li><li>与第 41 课的分工：41 课讲怎么套、成本多少、适合谁；这一课讲它为什么成立、在哪一步会断。</li></ul>
+<h2>收敛示意</h2><div class="example-box"><p>收敛过程示意（区间逐级缩窄，但永不归零）：<br>① 日线末段疑似背驰，价格区间 [20.00, 24.00]，宽度 4.00；<br>② 切 30 分钟，找到内部背驰段，区间收窄至 [21.50, 23.00]，宽度 1.50；<br>③ 切 5 分钟，找到更细的背驰段，区间 [22.10, 22.60]，宽度 0.50；<br>④ 再切 1 分钟：K 线过短、跳空过多，结构已不完整 → 终止，取第③步的区间。<br>第④步的终止不是方法失效，是递归到了底。此时能用的是 0.50 宽的区间，不是一个价格。</p></div>
+<h2>常见疑问</h2><div class="qa-block"><h3 class="qa-q">高级别有背驰，次级别一直不背驰，要一直等下去吗？</h3><p>不等。事先设定时间或级别上限，到限就放弃这次机会，把「末段仍在延伸」写进记录。无限等待是把区间套当成了必然成功的流程，这是它最贵的误用方式。</p><h3 class="qa-q">区间套能不能用来找精确的入场点？</h3><p>不能。它给的是更小的区间，不是一个价格。要在区间内下单仍需自己定规则——分批、或等突破区间边界确认。这部分属于资金管理，不属于区间套。</p></div>
 <h2>本课涉及的概念</h2><ul class="clean term-brief"><li><a href="/terms/jiange/">区间套与级别</a><span>用低级别的背驰来确认高级别背驰的方法，可把买卖点逐步收敛到更精确的区间。级别是缠论区别于其他技术分析的根本。</span></li><li><a href="/terms/beichi/">背驰</a><span>走势方向不变但力度衰减的现象，是比较同级别、同类型走势之间力度得出的结论。背驰是趋势终结的必要条件。</span></li><li><a href="/terms/mai1/">第一类买卖点</a><span>趋势末端的背驰点，也叫「一买/一卖」。位置最好、风险最高，必须同时满足趋势、背驰、次级别确认三个条件才成立。</span></li></ul>
 <h2>前后课衔接</h2><ul class="clean"><li>上一课 <a href="/lessons/70/">第 70 课 · 背驰的数学刻画</a>：力度比较的量化方式。</li><li>下一课 <a href="/lessons/72/">第 72 课 · 走势必完美的证明</a>：地基命题的论证结构，以及它证明不了什么。</li></ul>
 <h2>所属分组</h2>
 <p>第四组 · 实战与哲学（第 61–108 课）。后半部分含大量实盘复盘与市场哲学，与前面的结构体系互为表里。</p>
-
+<div class="def-box sum-box"><span class="def-k">一句话总结</span><p>区间套的存在性来自递归（末段必由次级别构成），终止性来自递归有底；它收敛范围不收敛点位，落空本身就是结论。</p></div>
 <h2>阅读建议</h2>
 <p>先读完本课原文，再对照上面的要点提纲。原文中的概念常跨课出现，遇到不确定的定义可直接点击「本课涉及的概念」查看词条页，那里有严格定义与常见误读对照。</p>
-
+<p class="lesson-link">最后一个证明，留给全书的地基性命题——72 课。</p>
 </div>
 <div class="rel" style="margin-top:24px"><a href="/lessons/70/">← 第 70 课</a><a href="/lessons/72/">第 72 课 →</a><a href="/lessons/">全部目录</a></div>
 <div class="ad-slot"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4150144052388028" data-ad-slot="6072699655" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div><div class="note" style="margin-top:26px">

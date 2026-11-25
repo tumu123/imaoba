@@ -10,8 +10,8 @@
 <meta property="og:title" content="缠论第64课 · 中枢的数学定义 · 要点提纲 · 缠论百科">
 <meta property="og:description" content="缠中说禅《教你炒股票》第64课「中枢的数学定义」核心论点、关键要点与常见疑问。区间重叠的严格表述。">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="/assets/style.css?v=202611251451">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://imaoba.com/lessons/64/#article","headline":"缠论第 64 课：中枢的数学定义","url":"https://imaoba.com/lessons/64/","description":"缠中说禅《教你炒股票》第 64 课「中枢的数学定义」的核心论点、关键要点与常见疑问。区间重叠的严格表述。","inLanguage":"zh-CN","isPartOf":{"@id":"https://imaoba.com/#website"},"publisher":{"@id":"https://imaoba.com/#org"},"dateModified":"2026-11-25","about":[{"@type":"Thing","name":"缠论"},{"@type":"Thing","name":"中枢的数学定义"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://imaoba.com/"},{"@type":"ListItem","position":2,"name":"108课索引","item":"https://imaoba.com/lessons/"},{"@type":"ListItem","position":3,"name":"第 64 课"}]},{"@type":"FAQPage","@id":"https://imaoba.com/lessons/64/#faq","mainEntity":[{"@type":"Question","name":"为什么是三段而不是两段？","acceptedAnswer":{"@type":"Answer","text":"两段的重叠不足以表达「反复争夺」。三段才构成有效的中枢区间。"}}]}]}</script><meta name="google-adsense-account" content="ca-pub-4150144052388028"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4150144052388028" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/style.css?v=202611251458">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://imaoba.com/lessons/64/#article","headline":"缠论第 64 课：中枢的数学定义","url":"https://imaoba.com/lessons/64/","description":"缠中说禅《教你炒股票》第 64 课「中枢的数学定义」的核心论点、关键要点与常见疑问。区间重叠的严格表述。","inLanguage":"zh-CN","isPartOf":{"@id":"https://imaoba.com/#website"},"publisher":{"@id":"https://imaoba.com/#org"},"dateModified":"2026-11-25","about":[{"@type":"Thing","name":"缠论"},{"@type":"Thing","name":"中枢的数学定义"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://imaoba.com/"},{"@type":"ListItem","position":2,"name":"108课索引","item":"https://imaoba.com/lessons/"},{"@type":"ListItem","position":3,"name":"第 64 课"}]},{"@type":"FAQPage","@id":"https://imaoba.com/lessons/64/#faq","mainEntity":[{"@type":"Question","name":"为什么是三段而不是两段？","acceptedAnswer":{"@type":"Answer","text":"两段的重叠不足以表达「反复争夺」。三段才构成有效的中枢区间。"}},{"@type":"Question","name":"中枢区间要不要把上下影线算进去？","acceptedAnswer":{"@type":"Answer","text":"用最高价与最低价，不另设规则。定义只说高点、低点，不区分实体与影线；要改就必须全站统一改，不能一处用影线、一处用实体，否则同一段走势会算出两个中枢。"}},{"@type":"Question","name":"中枢形成之后区间会变吗？","acceptedAnswer":{"@type":"Answer","text":"会。延伸与扩展都会改变边界（第 16、53 课）。变的是区间数值，不变的是构成方式——仍然是三段次级别走势的重叠，这一点在任何时候都不改。"}}]}]}</script><meta name="google-adsense-account" content="ca-pub-4150144052388028"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4150144052388028" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="site-head"><div class="wrap">
@@ -37,20 +37,20 @@
 <div class="meta"><span class="upd">最后更新 2026年11月25日</span></div>
 <div class="art-body">
 <p style="color:var(--fg-dim);font-size:13.5px;margin-bottom:4px">区间重叠的严格表述。</p>
-
+<p class="lesson-q"><b>本课要解决的问题</b>　中枢的定义只有一行，却是全站被引用最多的判据。这一课把那一行拆开：每个符号管什么、边界怎么算、哪些东西不能塞进来。</p>
 <div class="note" style="margin:18px 0 4px"><b>核心论点</b><br>中枢的数学定义：连续三个次级别走势区间重叠部分的严格表述。</div>
 <h2>关键要点</h2><ul class="clean"><li>取三段的高点最小值 ZG，低点最大值 ZD。</li><li>ZG > ZD 才构成中枢，否则说明没有真实重叠。</li><li>定义基于区间运算，与形态、时间无关。</li><li>严格的定义使中枢可以由程序自动识别。</li></ul>
-
-
-<h2>常见疑问</h2><div class="qa-block"><h3 class="qa-q">为什么是三段而不是两段？</h3><p>两段的重叠不足以表达「反复争夺」。三段才构成有效的中枢区间。</p></div>
+<h2>推导与边界</h2><ul class="clean"><li>定义：连续三段次级别走势类型，取第一段与第三段的高点最小值 ZG、低点最大值 ZD；ZG > ZD 时，区间 [ZD, ZG] 构成中枢。</li><li>三个关键词要拆开：连续（中间不能缺段）、次级别走势类型（不是笔，也不是任意三根 K 线）、重叠（区间交集非空）。</li><li>为什么取一三段而不取三段的极值：第二段是回抽段，它的高低点必然落在一三段之间；用一三段判定与用三段判定等价，但计算更简洁、更少歧义。</li><li>ZG = ZD 是临界，不构成中枢：重叠退化为一个点，说明多空只在某个价位接触过一次，没有形成反复争夺的区间。</li><li>定义与形态、时间无关：不看涨跌幅、不看持续几天、不看成交量。把这些因素塞进中枢判定，定义立刻失去可复现性。</li><li>严格定义的价值在于可编码：区间运算能交给程序完成。第 87 课的程序化之所以可行，起点就是这一行。</li><li>中枢方向由进入段决定：向上进入的是上涨中枢，向下进入的是下跌中枢。方向不属于定义，但影响后续三买的判定。</li></ul>
+<h2>结构示例（示意性构造）</h2><div class="example-box"><p>数值演算：<br>三段次级别走势：① 10.00 → 13.00（高 13.00，低 10.00）；② 13.00 → 11.20；③ 11.20 → 14.50（高 14.50，低 11.20）。<br>ZG = min(13.00, 14.50) = 13.00；ZD = max(10.00, 11.20) = 11.20。<br>ZG 13.00 > ZD 11.20 → 中枢区间 [11.20, 13.00]。<br>变体一：第三段只到 12.80 → ZG = 12.80，区间收窄为 [11.20, 12.80]，仍成立。<br>变体二：第三段低点回到 10.50，且高点 11.00 → ZG = min(13.00, 11.00) = 11.00，ZD = max(10.00, 10.50) = 10.50，区间 [10.50, 11.00]，重叠大幅收窄但仍成立。<br>变体三：第三段高点 10.80、低点 10.20 → ZG = 10.80 低于 ZD = 10.20？不成立，实际 ZG = 10.80、ZD = 10.20 时 ZG > ZD 仍成立；要退化必须让三段区间完全没有公共交集，此时 ZG ≤ ZD，中枢不构成。</p></div>
+<h2>常见疑问</h2><div class="qa-block"><h3 class="qa-q">为什么是三段而不是两段？</h3><p>两段的重叠不足以表达「反复争夺」。三段才构成有效的中枢区间。</p><h3 class="qa-q">中枢区间要不要把上下影线算进去？</h3><p>用最高价与最低价，不另设规则。定义只说高点、低点，不区分实体与影线；要改就必须全站统一改，不能一处用影线、一处用实体，否则同一段走势会算出两个中枢。</p><h3 class="qa-q">中枢形成之后区间会变吗？</h3><p>会。延伸与扩展都会改变边界（第 16、53 课）。变的是区间数值，不变的是构成方式——仍然是三段次级别走势的重叠，这一点在任何时候都不改。</p></div>
 <h2>本课涉及的概念</h2><ul class="clean term-brief"><li><a href="/terms/zhongshu/">中枢</a><span>连续三个次级别走势的重叠区间。中枢的级别由构成它的次级别走势决定，是整个理论的核心与买卖点的坐标系。</span></li><li><a href="/terms/jiange/">区间套与级别</a><span>用低级别的背驰来确认高级别背驰的方法，可把买卖点逐步收敛到更精确的区间。级别是缠论区别于其他技术分析的根本。</span></li><li><a href="/terms/xianduan/">线段</a><span>由至少三笔构成、有明确方向的走势单元，是中枢的构件。线段划分是缠论实操中争议最大的环节。</span></li></ul>
 <h2>前后课衔接</h2><ul class="clean"><li>上一课 <a href="/lessons/63/">第 63 课 · 递归与自相似</a>：分形结构在市场中的体现。</li><li>下一课 <a href="/lessons/65/">第 65 课 · 级别的严格定义</a>：级别由递归而非时间周期决定。</li></ul>
 <h2>所属分组</h2>
 <p>第四组 · 实战与哲学（第 61–108 课）。后半部分含大量实盘复盘与市场哲学，与前面的结构体系互为表里。</p>
-
+<div class="def-box sum-box"><span class="def-k">一句话总结</span><p>中枢 = 连续三段次级别走势类型的区间交集，ZG 取一三段高点最小值、ZD 取低点最大值，ZG > ZD 才成立；与形态时间无关。</p></div>
 <h2>阅读建议</h2>
 <p>先读完本课原文，再对照上面的要点提纲。原文中的概念常跨课出现，遇到不确定的定义可直接点击「本课涉及的概念」查看词条页，那里有严格定义与常见误读对照。</p>
-
+<p class="lesson-link">中枢定义了空间，65 课定义它所在的坐标系——级别。</p>
 </div>
 <div class="rel" style="margin-top:24px"><a href="/lessons/63/">← 第 63 课</a><a href="/lessons/65/">第 65 课 →</a><a href="/lessons/">全部目录</a></div>
 <div class="ad-slot"><span class="ad-label">广告</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4150144052388028" data-ad-slot="6072699655" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div><div class="note" style="margin-top:26px">
