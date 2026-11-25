@@ -8,6 +8,7 @@ README-开发版存档.md
 # ---- 生成物与临时文件 ----
 imaoba-site.zip
 preview-*.png
+r[0-9]-*.png
 theme-light-check/
 
 # ---- 系统与编辑器 ----
