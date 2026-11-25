@@ -1,0 +1,65 @@
+# 缠论百科
+
+> 缠论核心概念词条化整理：笔、线段、中枢、走势类型、背驰、三类买卖点。附 108 课原文目录索引与常见误读对照。
+
+- 站点：https://imaoba.com/
+- 语言：简体中文
+- 主题：缠论（缠中说禅《教你炒股票》108 课）核心概念的结构化词条整理
+- 内容性质：学习笔记性质的概念整理，非原文转录，不构成投资建议
+
+## 核心词条（16 条）
+
+每个词条按「定义 → 前置条件 → 体系位置 → 常见误读」四段式整理，可独立引用。
+
+- [分型](https://imaoba.com/terms/fenxing/)：由三根相邻（经包含处理后的）K线构成的顶分型或底分型，是「笔」的起点，也是整个缠论体系的最小结构单元。
+- [K线包含关系](https://imaoba.com/terms/baohan/)：相邻K线高低点互相包含时的合并规则，是画分型、画笔之前必须完成的预处理步骤。
+- [笔](https://imaoba.com/terms/bi/)：由一顶一底两个相邻分型构成，且中间至少间隔一根独立K线的结构。笔是线段与中枢的构件。
+- [线段](https://imaoba.com/terms/xianduan/)：由至少三笔构成、有明确方向的走势单元，是中枢的构件。线段划分是缠论实操中争议最大的环节。
+- [中枢](https://imaoba.com/terms/zhongshu/)：连续三个次级别走势的重叠区间。中枢的级别由构成它的次级别走势决定，是整个理论的核心与买卖点的坐标系。
+- [走势类型](https://imaoba.com/terms/zoushi/)：市场走势只有三种类型：上涨、下跌、盘整。任何走势都可以被唯一地分解为走势类型的连接。
+- [背驰](https://imaoba.com/terms/beichi/)：走势方向不变但力度衰减的现象，是比较同级别、同类型走势之间力度得出的结论。背驰是趋势终结的必要条件。
+- [三类买卖点](https://imaoba.com/terms/maimaidian/)：缠论的完整操作体系：第一类（趋势背驰）、第二类（次级回抽不破）、第三类（离开中枢后回抽不回中枢）。本页为总览，三点各自另有独立词条。
+- [第一类买卖点](https://imaoba.com/terms/mai1/)：趋势末端的背驰点，也叫「一买/一卖」。位置最好、风险最高，必须同时满足趋势、背驰、次级别确认三个条件才成立。
+- [第二类买卖点](https://imaoba.com/terms/mai2/)：第一类买卖点之后，次级别走势回抽但不破前低（前高）所形成的位置。风险显著低于一买，是绝大多数人可实际执行的点。
+- [第三类买卖点](https://imaoba.com/terms/mai3/)：走势离开中枢后，次级别回抽不再回到中枢区间内所形成的位置。它是中枢被有效突破的确认，往往对应趋势加速段。
+- [走势必完美](https://imaoba.com/terms/zoushibiwanmei/)：任何走势最终都必然以某种结构的完成而结束。这是缠论的地基性命题，它保证结构必然完成，但不提供任何价格预测。
+- [同级别分解](https://imaoba.com/terms/jiangefenjie/)：把任意复杂走势，按同一级别拆解成可互相比较的走势单元。它是判断背驰、定位买卖点的必要前提。
+- [特征序列](https://imaoba.com/terms/tezhengxulie/)：把线段内部的笔按方向分类后构成的序列。特征序列出现分型，是判断线段终结的关键信号，也是实时判定中最实用的一环。
+- [盘整背驰](https://imaoba.com/terms/panzhengbeichi/)：单个中枢内部的背驰，也就是只有一个中枢时的力度衰减现象。它与趋势背驰的力度比较基准完全不同，混用会导致买点误判。
+- [区间套与级别](https://imaoba.com/terms/jiange/)：用低级别的背驰来确认高级别背驰的方法，可把买卖点逐步收敛到更精确的区间。级别是缠论区别于其他技术分析的根本。
+
+## 108 课目录
+
+共 108 课，按内容逻辑分四组；每课有独立要点提纲页。
+
+- [108 课完整索引](https://imaoba.com/lessons/)：全部课次的目录、分组导读与一句话要点
+- [第一组 · 基础概念与操作理念（第 1–10 课）](https://imaoba.com/lessons/#g1)：第 1–10 课
+- [第二组 · 笔、线段与中枢（第 11–30 课）](https://imaoba.com/lessons/#g2)：第 11–30 课
+- [第三组 · 买卖点体系（第 31–60 课）](https://imaoba.com/lessons/#g3)：第 31–60 课
+- [第四组 · 实战与哲学（第 61–108 课）](https://imaoba.com/lessons/#g4)：第 61–108 课
+
+## 原版与整理版资料（15 条）
+
+- [缠论 108 课 · 阿娇版](https://imaoba.com/docs/czsc-108ke-ajiao/)：流传最广的带注解全本，正文配大量走势图解，体量完整。（PDF，1262 页）
+- [缠论 108 课 · 土匪版（简体带导航）](https://imaoba.com/docs/czsc-108ke-tufei/)：简体全本，学习心得直接批注在课文旁，PDF 带书签导航，适合初学者通读。（PDF，1224 页）
+- [缠中说禅：教你炒股票 108 课 · 文字插图版](https://imaoba.com/docs/czsc-108ke-wenzi-chatu/)：体量轻的读本，文字为主配少量插图，适合手机平板快速通读。（PDF，267 页）
+- [缠中说禅教你炒股票 · 红炉火课件](https://imaoba.com/docs/czsc-jiaoni-chaogupiao-hongluhuo/)：按知识模块重组的幻灯片课件，图多字少，适合教学演示或快速复习。（RAR，—）
+- [缠中说禅：教你炒股票 · 配图校注版](https://imaoba.com/docs/czsc-jiaoni-chaogupiao-peitu-jiaozhu/)：带配图与文字校注的全本，原文之后附校订说明，配图为高清图片。（PDF，429 页）
+- [市场哲学的数学原理 · 完全配图手册（2017）](https://imaoba.com/docs/czsc-shichang-zhexue-peitu-2017/)：缠论资料里公认最完整的配图本，713 页、一千三百余张高清配图。（PDF，713 页）
+- [缠论学习图片集 · 彩图版](https://imaoba.com/docs/czsc-xuexi-tupianji-caitu/)：90 页彩图合集，把形态学概念做成图例，适合配合文字教材对照查看。（PDF，90 页）
+- [缠博原集 · 全集](https://imaoba.com/docs/czsc-yuanji-quanji/)：缠中说禅新浪博客全部文章打包，除《教你炒股票》外还收录诗词、文史与货币评论。（CHM，1134 篇）
+- [缠论操盘术：实战精要手册](https://imaoba.com/docs/chanlun-caopanshu-shizhan-jingyao/)：李一波著，人民邮电出版社 2016 年出版。用精简表述讲基础形态，再落到实战。（PDF，212 页）
+- [缠论：缠中说禅核心炒股技术精解](https://imaoba.com/docs/chanlun-hexin-jishu-jingjie/)：鲍迪克编著。版面左侧解析、右侧原文，可以对照着读。（PDF，247 页）
+- [缠论基础概念 · 图解](https://imaoba.com/docs/chanlun-jichu-gainian-tujie/)：只有 17 页的短图解，把最基础的概念集中画清楚，入门当天就能看完。（PDF，17 页）
+- [缠论解析：缠中说禅技术理论图解](https://imaoba.com/docs/chanlun-jiexi-jishu-tujie/)：江南小隐著，中国宇航出版社 2012 年出版。梳理 108 课的同时也把理论矛盾摆上台面讲。（PDF，161 页）
+- [趋势定位：缠中说禅理论精解](https://imaoba.com/docs/chanlun-qushi-dingwei-jingjie/)：付上金编著，中国宇航出版社 2014 年出版。针对原著语言艰涩的问题，对框架做系统性重构。（PDF，229 页）
+- [图解缠论：核心理论推导与实战演示 · 白金版](https://imaoba.com/docs/chanlun-tujie-baijinban/)：陈秋明著，中国经济出版社 2016 年修订白金版。用大量个股图形讲透中枢动力学。（PDF，224 页）
+- [期货日内交易实战技法 · 陈金生](https://imaoba.com/docs/qihuo-rinei-jiaoyi-shizhan/)：陈金生编著，经济管理出版社 2013 年出版。非缠论体系，供多品种多周期读者参考。（PDF，299 页）
+
+## 工具
+
+- [缠论画线工具](https://imaoba.com/tool/)：粘贴 K 线数据，自动完成包含处理、分型识别、画笔、画线段、画中枢，支持新笔/老笔切换与 PNG/JSON 导出，全部在浏览器本地计算
+
+## 关于
+
+- [关于本站](https://imaoba.com/about/)：定位、内容范围、局限与免责声明

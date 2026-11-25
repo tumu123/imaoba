@@ -59,6 +59,7 @@ section{padding:38px 0}
 section+section{border-top:1px solid var(--line-soft)}
 .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
 .sec-head h2{margin:0;font-size:20px;letter-spacing:-.2px}
+.sec-head h1{margin:0;font-size:24px;letter-spacing:-.2px}
 .sec-head .more{font-size:13px;color:var(--fg-dim);margin-left:auto}
 .sec-sub{color:var(--fg-dim);font-size:13.5px;margin:0 0 22px}
 
