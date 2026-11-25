@@ -125,6 +125,12 @@ td:first-child{color:var(--fg);width:44%}
 .upd{font-size:12px;color:var(--fg-dim)}
 .src-note{font-size:13px;color:var(--fg-dim);margin:0 0 2px}
 .src-list a{font-size:13px}
+/* ---- 课程页：本课要解决的问题 / 示例框 / 连接句 ---- */
+.lesson-q{margin:14px 0 18px;font-size:15px;line-height:1.85;color:var(--fg-soft);padding-left:12px;border-left:3px solid var(--line)}
+.lesson-q b{color:var(--brand);font-weight:600;margin-right:6px}
+.example-box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin:10px 0 4px}
+.example-box p{margin:0;font-size:14px;line-height:1.9;color:var(--fg-soft)}
+.lesson-link{margin:16px 0 0;font-size:13.5px;line-height:1.8;color:var(--fg-dim)}
 
 /* 单课页 常见疑问 */
 .qa-block{border-left:2px solid var(--line);padding-left:16px;margin:6px 0 4px}
